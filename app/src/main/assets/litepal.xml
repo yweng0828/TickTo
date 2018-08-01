@@ -1,0 +1,19 @@
+<?xml version='1/0' encoding='utf-8'?>
+<litepal>
+	<dbname value="DB4_Things" >
+
+	</dbname>
+
+	<version value='4' >
+
+	</version>
+
+	<list>
+		<mapping class="com.example.wy.tickto.entity.ThingInfo">
+		</mapping>
+		<mapping class="com.example.wy.tickto.diary.DiaryContent">
+		</mapping>
+
+	</list>
+
+</litepal>

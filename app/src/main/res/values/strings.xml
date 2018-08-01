@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TickTo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="day_night_label">日间模式</string>
+    <string name="title_activity_add_thing">AddThing</string>
+    <string name="title_activity_show_diary">ShowDiaryActivity</string>
+
+</resources>

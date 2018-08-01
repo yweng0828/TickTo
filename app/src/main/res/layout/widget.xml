@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView android:id="@+id/icon1"
+        android:layout_height="wrap_content"
+        android:src="@drawable/pic_logo"
+        android:layout_alignBottom="@+id/wt_previous"
+        android:layout_width="150dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wt_title"
+        android:text="content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/icon1"
+        android:layout_alignParentTop="true"
+        android:textSize="15dp"
+        android:maxWidth="200dp"
+        android:lines="1"
+        android:ellipsize="end"/>
+
+    <Button
+        android:layout_height="50dp"
+        android:id="@+id/wt_previous"
+        android:layout_below="@+id/wt_title"
+        android:layout_toRightOf="@+id/icon1"
+        android:background="@drawable/previous"
+        android:layout_width="65dp" />
+    <ImageView
+        android:layout_height="50dp"
+        android:id="@+id/wt_play"
+        android:layout_below="@+id/wt_title"
+        android:layout_toRightOf="@+id/wt_previous"
+        android:layout_alignTop="@+id/wt_previous"
+        android:layout_width="65dp" />
+
+    <Button
+        android:layout_height="50dp"
+        android:id="@+id/wt_next"
+        android:layout_below="@+id/wt_title"
+        android:layout_toRightOf="@+id/wt_play"
+        android:layout_alignTop="@+id/wt_play"
+        android:background="@drawable/next"
+        android:layout_width="65dp" />
+
+    <Button
+        android:layout_height="25dp"
+        android:id="@+id/wt_clear"
+        android:background="@drawable/search_clear_pressed"
+        android:layout_width="25dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/wt_next"
+        android:layout_toEndOf="@+id/wt_next" />
+</RelativeLayout>

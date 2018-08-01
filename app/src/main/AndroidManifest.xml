@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.wy.tickto">
+
+    <application
+        android:name="org.litepal.LitePalApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".leftmenu.aboutus"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".leftmenu.AddThing"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service
+            android:name=".leftmenu.AudioService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".timingpush.AlertService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name=".notifi.PreviousBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.wy.tickto.broadcasttest.PREVIOUS" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notifi.PlayBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.wy.tickto.broadcasttest.PLAY" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notifi.NextBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.wy.tickto.broadcasttest.NEXT" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notifi.ClearBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.example.wy.tickto.broadcasttest.CLEAR" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".leftmenu.SettingActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme" />
+
+        <receiver
+            android:name=".timingpush.AlarmReceiver"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".diary.WriteDiaryActivity"
+            android:parentActivityName=".diary.ShowDiaryActivity"></activity>
+        <activity
+            android:name=".diary.ShowDiaryActivity"
+            android:label="@string/title_activity_show_diary"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity android:name=".diary.DetailContentActivity"
+            android:parentActivityName=".diary.ShowDiaryActivity">
+        </activity>
+    </application>
+
+</manifest>

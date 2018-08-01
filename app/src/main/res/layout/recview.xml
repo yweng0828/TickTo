@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?android:listPreferredItemHeight"
+    android:background="?selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/imageView_rv"
+        style="@style/ItemStyle"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <CheckBox
+        android:id="@+id/checkbox_rv"
+        style="@style/ItemStyle"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/whatthings"
+        style="@style/ItemStyle"
+        android:layout_toEndOf="@id/checkbox_rv"
+        android:layout_toRightOf="@id/checkbox_rv" />
+
+    <TextView
+        android:id="@+id/howimortant"
+        style="@style/ItemStyle"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_toEndOf="@id/whatthings"
+        android:layout_toRightOf="@id/whatthings" />
+
+</RelativeLayout>
